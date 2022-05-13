@@ -12,9 +12,9 @@ namespace Double_Stack_Well_Car
 
             Read_data.model(file_name);
             Original_model.model();
+            Two_stage.model();
 
-
-
+            Console.WriteLine("<Program end>");
             Console.Read();
         }
     }

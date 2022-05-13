@@ -2019,6 +2019,8 @@ namespace Double_Stack_Well_Car
 
                 check_enter_three_stage = Function.check_stage2(car_amount, w20l_rest, w20e_rest, w40_rest, hub_set);
 
+                if (check_enter_three_stage) Three_stage.model();
+                
                 new_model.End();
                 #endregion
 
