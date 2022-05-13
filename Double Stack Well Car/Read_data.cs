@@ -19,7 +19,6 @@ namespace Double_Stack_Well_Car
 
         public static double[] x_weights = new double[0];
         public static double[] v_weights = new double[0];
-
         public static double[] y_weights = new double[0];
 
         public static int hub_amount;
@@ -27,6 +26,8 @@ namespace Double_Stack_Well_Car
         public static int car_amount;
         public static int stack_amount = 2;
 
+        public static List<List<double>> car_info = new List<List<double>>();
+        public static List<List<double>> car_info_second = new List<List<double>>();
         public static void model(string file_name)
         {
 
@@ -112,7 +113,7 @@ namespace Double_Stack_Well_Car
             {
 
                 StreamReader car_file = new StreamReader(file_path);
-                List<List<double>> car_info = new List<List<double>>();
+                
                 string[] values = null;
 
                 string car_data = car_file.ReadLine();
@@ -121,6 +122,7 @@ namespace Double_Stack_Well_Car
                 {
                     values = car_data.Split(',');
                     car_info.Add(new List<double> { double.Parse(values[1]), double.Parse(values[2]) });
+                    car_info_second.Add(new List<double> { double.Parse(values[1]), double.Parse(values[2]) });
                 }
 
                 car_amount = car_info.Count;
